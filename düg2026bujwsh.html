@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+    <title>düg2026bujwsh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .section {
+            margin: 30px 0;
+        }
+
+        .question {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .choice-btn {
+            padding: 15px 30px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .choice-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .summary h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .celebration {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .reset-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .step-indicator {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .choice-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- SEKTION 1: Willkommen & Einladung -->
+        <div id="section-welcome" class="section">
+            <div class="header">
+                <h1>💝 Wunsch-Gutschein</h1>
+                <p>Ich lade dich zu einem Nachmittag nach Dresden ein!</p>
+            </div>
+            <p style="color: #666; margin: 20px 0; font-size: 16px;">
+                Bist du bereit, zwei Entscheidungen zu treffen um selber mitzubestimmen?
+            </p>
+            <button class="choice-btn" onclick="startChoosing()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px 40px; font-size: 16px;">
+                Ja ich bin bereit! ✨
+            </button>
+        </div>
+
+        <!-- SEKTION 2: Erste Entscheidung (Activity) -->
+        <div id="section-activity" class="section hidden">
+            <div class="step-indicator">Schritt 1 von 2</div>
+            <div class="question">Was möchtest du erleben?</div>
+            <div class="button-group">
+                <button class="choice-btn" onclick="chooseActivity('VR-Adventure')">🎮 Option 1<br><span style="font-size: 12px; font-weight: 400; margin-top: 5px; display: block;">Etwas völlig Neues</span></button>
+                <button class="choice-btn" onclick="chooseActivity('Schwarzlicht-Minigolf')">⚫ Option 2<br><span style="font-size: 12px; font-weight: 400; margin-top: 5px; display: block;">Etwas Sicheres</span></button>
+            </div>
+        </div>
+
+        <!-- SEKTION 3: Zweite Entscheidung (Dinner) -->
+        <div id="section-dinner" class="section hidden">
+            <div class="step-indicator">Schritt 2 von 2</div>
+            <div class="question">Wie möchtest du den Abend enden lassen?</div>
+            <div class="button-group">
+                <button class="choice-btn" onclick="chooseDinner('Klassisches Restaurant')">🕯️ Option 1<br><span style="font-size: 12px; font-weight: 400; margin-top: 5px; display: block;">Klassisch auf der Erde</span></button>
+                <button class="choice-btn" onclick="chooseDinner('Schwerelos Restaurant')">🌌 Option 2<br><span style="font-size: 12px; font-weight: 400; margin-top: 5px; display: block;">Hoch über der Erde</span></button>
+            </div>
+        </div>
+
+        <!-- SEKTION 4: Zusammenfassung -->
+        <div id="section-summary" class="section hidden">
+            <div class="celebration">🎉</div>
+            <div class="summary">
+                <h2>Unser Abenteuer wartet!</h2>
+                <p style="margin-bottom: 20px;">So wird unser Nachmittag in Dresden:</p>
+                <div class="summary-item">
+                    <strong>Aktivität:</strong> <span id="summary-activity"></span>
+                </div>
+                <div class="summary-item">
+                    <strong>Dinner:</strong> <span id="summary-dinner"></span>
+                </div>
+                <p style="margin-top: 25px; font-size: 14px;">
+                    Ich freue mich auf einen unvergesslichen Nachmittag mit dir!<br>
+					Dein Pups ❤️
+                </p>
+            </div>
+            <button class="reset-btn" onclick="resetChoices()">Doch neu überlegen</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedActivity = '';
+        let selectedDinner = '';
+
+        function startChoosing() {
+            document.getElementById('section-welcome').classList.add('hidden');
+            document.getElementById('section-activity').classList.remove('hidden');
+        }
+
+        function chooseActivity(activity) {
+            selectedActivity = activity;
+            document.getElementById('section-activity').classList.add('hidden');
+            document.getElementById('section-dinner').classList.remove('hidden');
+        }
+
+        function chooseDinner(dinner) {
+            selectedDinner = dinner;
+            document.getElementById('section-dinner').classList.add('hidden');
+            document.getElementById('section-summary').classList.remove('hidden');
+            
+            // Zusammenfassung anzeigen
+            document.getElementById('summary-activity').textContent = selectedActivity;
+            document.getElementById('summary-dinner').textContent = selectedDinner;
+        }
+
+        function resetChoices() {
+            selectedActivity = '';
+            selectedDinner = '';
+            document.getElementById('section-welcome').classList.remove('hidden');
+            document.getElementById('section-activity').classList.add('hidden');
+            document.getElementById('section-dinner').classList.add('hidden');
+            document.getElementById('section-summary').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
